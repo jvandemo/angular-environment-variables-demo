@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EnvService } from 'src/app/env.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-environment-variables-demo';
+
+  constructor(
+    public env: EnvService
+  ) {
+  }
 }
