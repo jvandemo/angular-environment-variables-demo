@@ -1,27 +1,23 @@
-# AngularEnvironmentVariablesDemo
+# Angular Environment Variables Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
+This project contains a working demo of [How to use environment variables to configure your Angular application without a rebuild](https://jvandemo.com/how-to-use-environment-variables-to-configure-your-angular-application-without-a-rebuild/).
 
-## Development server
+If you have the ability to rebuild your application for use in different environments, the built-in Angular CLI [application environments](https://github.com/angular/angular-cli/wiki/stories-application-environments) are perfect for storing configuration details.
+ 
+However, if your application needs to be deployed with a different configuration in different environments **without having the ability to rebuild it**, this mechanism may be just what you are looking for. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To get a better understanding of the inner workings, make sure to [read the article](https://jvandemo.com/how-to-use-environment-variables-to-configure-your-angular-application-without-a-rebuild/).
 
-## Code scaffolding
+## Instructions
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Run `ng build --prod` to build the project. The build artifacts (including `env.js`) will be stored in the `dist/` directory.
+2. Serve the contents of the `dist` directory using a static web server like [serve](https://github.com/zeit/serve).
+3. Edit `env.js` in your `dist` directory to control the environment variables within your Angular application without the need for a rebuild.
 
-## Build
+As soon as you refresh your browser, the new environment variables are picked up:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+![Angular Environment Variables Demo](https://user-images.githubusercontent.com/1859381/44098643-b82bd342-9fae-11e8-8810-8c80b814eb3a.gif)
 
-## Running unit tests
+## More info
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+For more information, check out the [How to use environment variables to configure your Angular application without a rebuild](https://jvandemo.com/how-to-use-environment-variables-to-configure-your-angular-application-without-a-rebuild/).
